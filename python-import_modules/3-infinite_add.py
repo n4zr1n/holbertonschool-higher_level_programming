@@ -1,0 +1,8 @@
+#!/usr/bin/pyhton3
+if __name__ == "__main__":
+    import sys
+    summ = 0
+    for arg in sys.argv[1:]:
+        summ += int(arg)
+    print("{}".format(summ))
+
