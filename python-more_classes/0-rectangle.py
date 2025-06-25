@@ -14,4 +14,5 @@ class Rectangle:
     This class does not have any attributes or methods yet, but it can be 
     used as a base for further extension in future tasks.
     """
+
     pass
