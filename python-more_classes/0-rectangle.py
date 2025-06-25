@@ -6,6 +6,7 @@ The Rectangle class serves as a placeholder for creating a rectangle object,
 but it does not yet contain any attributes or methods.
 """
 
+
 class Rectangle:
     """
     An empty class that defines a rectangle.
