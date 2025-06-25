@@ -3,6 +3,7 @@
 This module defines a Rectangle class with area and perimeter methods.
 """
 
+
 class Rectangle:
     """
     A class that defines a rectangle by its width and height.
@@ -11,7 +12,7 @@ class Rectangle:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
     """
-    
+
     def __init__(self, width=0, height=0):
         """Initialize the rectangle with width and height."""
         self.width = width
