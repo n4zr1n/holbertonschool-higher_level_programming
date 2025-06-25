@@ -11,7 +11,7 @@ class Rectangle:
     """
     An empty class that defines a rectangle.
 
-    This class does not have any attributes or methods yet, but it can be 
+    This class does not have any attributes or methods yet, but it can be
     used as a base for further extension in future tasks.
     """
 
