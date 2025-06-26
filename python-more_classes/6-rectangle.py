@@ -7,22 +7,16 @@ This module defines a Rectangle class with string representation.
 class Rectangle:
     """
     A class that defines a rectangle with width and height.
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
-
-        Methods:
-        area(): Returns the area of the rectangle.
-        perimeter(): Returns the perimeter of the rectangle.
-        __str__(): Returns a string representation using `#` to
-                   form the rectangle.
     """
+
+    # Public class attribute
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initializes the rectangle with width and height."""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1  # Increment instance count
 
     @property
     def width(self):
@@ -75,4 +69,4 @@ class Rectangle:
     def __del__(self):
         """Print a message when a Rectangle instance is deleted."""
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1  # Decrement instance count
