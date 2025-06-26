@@ -12,10 +12,11 @@ class Rectangle:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
 
-    Methods:
+        Methods:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
-        __str__(): Returns a string representation using `#` to form the rectangle.
+        __str__(): Returns a string representation using `#` to
+                   form the rectangle.
     """
 
     def __init__(self, width=0, height=0):
