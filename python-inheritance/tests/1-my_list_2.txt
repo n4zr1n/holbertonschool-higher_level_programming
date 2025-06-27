@@ -1,0 +1,6 @@
+"""
+>>> from my_list import MyList
+>>> my_list = MyList([5, 2, 8])
+>>> str(my_list)
+'[5, 2, 8]'
+"""

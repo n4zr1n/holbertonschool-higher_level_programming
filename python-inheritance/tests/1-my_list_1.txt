@@ -1,0 +1,5 @@
+"""
+>>> from my_list import MyList
+>>> isinstance(MyList(), list)
+True
+"""
