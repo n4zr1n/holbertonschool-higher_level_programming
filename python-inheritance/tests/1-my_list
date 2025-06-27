@@ -1,0 +1,47 @@
+"""
+Test MyList class with different input scenarios
+
+>>> from 1-my_list import MyList
+
+Test empty list
+>>> m = MyList()
+>>> m.print_sorted()
+[]
+
+Test already sorted list
+>>> m = MyList([1, 2, 3])
+>>> m.print_sorted()
+[1, 2, 3]
+
+Test reverse sorted list
+>>> m = MyList([5, 4, 3, 2, 1])
+>>> m.print_sorted()
+[1, 2, 3, 4, 5]
+
+Test unsorted list with negative integers
+>>> m = MyList([3, -1, 2, -5, 0])
+>>> m.print_sorted()
+[-5, -1, 0, 2, 3]
+
+Test with repeated values
+>>> m = MyList([2, 3, 2, 1, 3])
+>>> m.print_sorted()
+[1, 2, 2, 3, 3]
+
+Test with single element
+>>> m = MyList([42])
+>>> m.print_sorted()
+[42]
+
+Test with all same elements
+>>> m = MyList([7, 7, 7, 7])
+>>> m.print_sorted()
+[7, 7, 7, 7]
+
+Ensure original list is not modified
+>>> m = MyList([3, 1, 2])
+>>> m.print_sorted()
+[1, 2, 3]
+>>> print(m)
+[3, 1, 2]
+"""
