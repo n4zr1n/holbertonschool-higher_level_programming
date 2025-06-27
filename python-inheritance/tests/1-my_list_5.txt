@@ -1,6 +1,5 @@
-"""
+TEST: check print_sorted() with not sorted append
 >>> from my_list import MyList
 >>> my_list = MyList([3, 1, 2])
 >>> my_list.print_sorted()
 [1, 2, 3]
-"""

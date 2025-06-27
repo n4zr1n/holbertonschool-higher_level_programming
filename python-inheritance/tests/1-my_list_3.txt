@@ -1,8 +1,7 @@
-"""
+TEST: check append()
 >>> from my_list import MyList
 >>> my_list = MyList()
 >>> my_list.append(5)
 >>> my_list.append(10)
 >>> print(my_list)
 [5, 10]
-"""
