@@ -1,6 +1,20 @@
->>> from my_list import MyList
->>> my_list = MyList([5, 3, 7, 1])
+#!/usr/bin/python3
+"""
+This module defines MyList that inherits from list.
+
+>>> my_list = MyList([3, 1, 4])
 >>> my_list.print_sorted()
-[1, 3, 5, 7]
+[1, 3, 4]
 >>> print(my_list)
-[5, 3, 7, 1]
+[3, 1, 4]
+"""
+
+class MyList(list):
+    """
+    A list that can print itself in sorted order.
+    """
+    def print_sorted(self):
+        """
+        Prints a sorted version of the list (ascending).
+        """
+        print(sorted(self))
