@@ -1,6 +1,5 @@
-"""
+TEST: check __str__
 >>> from my_list import MyList
->>> my_list = MyList([5, 2, 8])
->>> str(my_list)
-'[5, 2, 8]'
-"""
+>>> my_list = MyList([3, 2, 1])
+>>> print(my_list)
+[3, 2, 1]

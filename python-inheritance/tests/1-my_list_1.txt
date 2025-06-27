@@ -1,5 +1,4 @@
-"""
+TEST: check inherits from list
 >>> from my_list import MyList
 >>> isinstance(MyList(), list)
 True
-"""
