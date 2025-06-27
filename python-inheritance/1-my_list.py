@@ -11,11 +11,16 @@ This module defines MyList class.
 
 
 class MyList(list):
-    """
-    MyList extends list to add a print_sorted method.
-    """
+    """ MyList class inherits from list and includes print_sorted method """
+
+    def __init__(self, *args):
+        """ Instantiates the MyList object """
+        super().__init__(*args)
+
     def print_sorted(self):
-        """
-        Prints the list sorted in ascending order.
-        """
+        """ Prints the list sorted in ascending order """
         print(sorted(self))
+
+    def __str__(self):
+        """ Returns a string representation of the list """
+        return f"[{', '.join(map(str, self))}]"
