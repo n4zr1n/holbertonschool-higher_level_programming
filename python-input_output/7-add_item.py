@@ -1,17 +1,27 @@
 #!/usr/bin/python3
 """
-Module that adds all command-line arguments to a Python list
-and saves them to a file in JSON format.
+Module adds all command-line arguments to list and saves it in a JSON file.
 
-The list is saved in 'add_item.json'. If the file exists, it
-loads the existing list and appends new arguments.
+If the file already exists, the content is extended with new arguments.
+The list is saved in a file called 'add_item.json'.
 """
 
-
 import sys
+import json
 from os.path import exists
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
+
+
+def save_to_json_file(my_obj, filename):
+    """Writes an object to a text file using JSON format."""
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
+
+
+def load_from_json_file(filename):
+    """Loads a Python object from a JSON file."""
+    with open(filename, "r", encoding="utf-8") as f:
+        return json.load(f)
+
 
 filename = "add_item.json"
 
