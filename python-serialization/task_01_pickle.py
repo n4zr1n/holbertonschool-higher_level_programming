@@ -29,5 +29,5 @@ class CustomObject:
                     return obj
                 else:
                     return None
-        except (FileNotFoundError, pickle.PickleError):
+        except (FileNotFoundError, pickle.PickleError, EOFError):
             return None
