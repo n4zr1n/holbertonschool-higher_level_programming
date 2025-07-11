@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" POST request """
+""" My GitHub! """
 import requests
 import sys
 
