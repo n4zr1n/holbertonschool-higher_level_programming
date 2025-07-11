@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" POST request """
+""" Error code """
 import requests
 import sys
 
