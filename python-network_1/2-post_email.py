@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """POST an email"""
-
-
-import urllib
+from urllib import parse, request
 import sys
+
+
 if __name__ == "__main__":
-    values = {'email': sys.argv[2]}
-    data = parse.urlencode(values)
-    data = data.encode('ascii')
-    req = request.Request(sys.argv[1], data)
+    url = sys.argv[1]
+    email = sys.argv[2]
+    email = parse.urlencode({'email': email}).encode('utf-8')
+    req = request.Request(url, email)
+    req.add_header("cfclearance", "true")
+
     with request.urlopen(req) as response:
         body = response.read()
         print(body.decode('utf-8'))
