@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     response = requests.post(url, data=data)
     try:
-        json_data = response.jsom()
+        json_data = response.json()
         if json_data:
             print("f[{}] {}".format(json_data.Id, json_data.__name__))
         else:
