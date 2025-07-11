@@ -9,11 +9,7 @@ if __name__ == "__main__":
     q = sys.argv[1] if len(sys.argv) > 1 else ""
     data = {'q': q}
 
-    response = requests.get(url, data=data)
-    if response.status_code >= 400:
-        print("Error code:", response.status_code)
-    else:
-        print(response.text)
+    response = requests.post(url, data=data)
     try:
         json_data = response.jsom()
         if json_data:
