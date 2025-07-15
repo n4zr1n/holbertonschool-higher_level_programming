@@ -13,13 +13,22 @@ auth = HTTPBasicAuth()
 jwt = JWTManager(app)
 
 users = {
-    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
-    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
+        "user1": {
+            "username": "user1",
+            "password": generate_password_hash("password"),
+            "role": "user"},
+        "admin1": {
+            "username": "admin1",
+            "password": generate_password_hash("password"),
+            "role": "admin"}
 }
+
 
 @auth.verify_password
 def verify_password(username, password):
     checked_user = users.get(username)
+    # If you define user password before conditional statement it will give error, because of user can be none and you \
+    # will check for none type object's password
     if username in users and check_password_hash(checked_user['password'], password):
         return users[username]
 
@@ -51,6 +60,7 @@ def only_admins():
         return "Admin Access: Granted"
     return jsonify({"error": "Admin access required"}), 403
 
+# This code block defines the error messages for jwt access
 @jwt_app.unauthorized_loader
 def handle_unauthorized_error(err):
     return jsonify({"error": "Missing or invalid token"}), 401
@@ -70,7 +80,6 @@ def handle_revoked_token_error(err):
 @jwt_app.needs_fresh_token_loader
 def handle_needs_fresh_token_error(err):
     return jsonify({"error": "Fresh token required"}), 401
-
 
 if __name__ == '__main__':
     app.run()
