@@ -36,6 +36,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
+
 if __name__ == "__main__":
     server_address = ('', 8000)
     httpd = HTTPServer(server_address, CustomHTTPRequestHandler)
