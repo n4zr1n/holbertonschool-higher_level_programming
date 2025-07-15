@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Flask"""
 from flask import Flask, request, jsonify
 from flask_httpauth import HTTPBasicAuth
