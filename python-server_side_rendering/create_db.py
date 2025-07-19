@@ -13,7 +13,7 @@ def create_database():
             price REAL NOT NULL
         )
     ''')
-    cursor.execute('DELETE FROM Products')  # Clear existing data for repeatability
+    cursor.execute('DELETE FROM Products')
     cursor.execute('''
         INSERT INTO Products (id, name, category, price) VALUES
         (1, 'Laptop', 'Electronics', 799.99),
